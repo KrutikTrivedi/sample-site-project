@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>REgister Page</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-front">
+                    <h2>LOGIN</h2>
+                    <form>
+                        <input type="email" class="input-box" placeholder="Your Email Id" required>
+                        <input type="tel" class="input-box" placeholder="Mobile No." required>
+                        <input type="password" class="input-box" placeholder="Password" required>
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <input type="checkbox"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn" onclick="openRegister()">New User</button>
+                    <a href="">Forgot Password</a>
+                </div>
+                <div class="card-back">
+                    <h2>REGISTER</h2>
+                    <form action="login.php" method="post">
+                        <input type="text" class="input-box" placeholder="Your Name" required>
+                        <input type="tel" class="input-box" placeholder="Mobile No." required>
+                        <input type="email" class="input-box" placeholder="Your Email Id" required>
+                        <input type="password" class="input-box" placeholder="Password" required>
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <input type="checkbox"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn" onclick="openLogin()">I've an Account</button>
+                    <a href="">Forgot Password</a>
+                </div>
+            </div>
+            <input type="button" value="BACK" onclick="history.back()" class="btn1">
+        </div>
+    </div>
+
+    <script>
+        var card = document.getElementById("card");
+
+        function openRegister() {
+            card.style.transform = "rotateY(-180deg)";
+        }
+
+        function openLogin() {
+            card.style.transform = "rotateY(0deg)";
+        }
+    </script>
+
+</body>
+
+</html>
